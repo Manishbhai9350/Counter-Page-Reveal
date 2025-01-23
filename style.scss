@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Sans-Var";
+  src: url(./public/fonts/GeneralSans-Variable.woff2);
+}
+@font-face {
+  font-family: "Zodiak-Var";
+  src: url(./public/fonts/Zodiak-Variable.woff2);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-block: 1rem;
+  .counter {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .counts-1, .counts-2 {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        .count {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-size: 11rem;
+                font-family: 'Sans-Var';
+                font-weight: 300;
+            }
+        }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Sans-Var";
+  src: url(./public/fonts/GeneralSans-Variable.woff2);
+}
+
+@font-face {
+  font-family: "Zodiak-Var";
+  src: url(./public/fonts/Zodiak-Variable.woff2);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 1rem;
+}
+
+.loader .counter {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  bottom: 5%;
+  left: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader .counter .counts-1, .loader .counter .counts-2 {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader .counter .counts-1 .count, .loader .counter .counts-2 .count {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader .counter .counts-1 .count h1, .loader .counter .counts-2 .count h1 {
+  font-size: 11rem;
+  font-family: 'Sans-Var';
+  font-weight: 300;
+}
+/*# sourceMappingURL=style.css.map */
