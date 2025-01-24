@@ -12,12 +12,12 @@ body {
 
 @font-face {
   font-family: "Sans-Var";
-  src: url(./public/fonts/GeneralSans-Variable.woff2);
+  src: url(./public/fonts/GeneralSans-Variable.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Zodiak-Var";
-  src: url(./public/fonts/Zodiak-Variable.woff2);
+  src: url(./public/fonts/Zodiak-Variable.woff2) format("woff2");
 }
 
 main {
@@ -27,7 +27,60 @@ main {
   position: relative;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-inline: 1rem;
+  padding-top: 1rem;
+  font-family: "Sans-Var";
+}
+
+nav a,
+nav p {
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+}
+
+nav .list a:hover {
+  display: inline-block;
+  position: relative;
+  opacity: .8;
+}
+
+nav .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.1rem;
+}
+
 .loader {
+  background: black;
+  color: white;
+  z-index: 99999;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -38,17 +91,48 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-block: 1rem;
+}
+
+.loader .svgs {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader .svgs .svg {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0, 0);
+          transform: translate(-50%, -50%) scale(0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.loader .svgs .svg svg {
+  width: 100%;
+  height: 100%;
 }
 
 .loader .counter {
@@ -68,14 +152,16 @@ main {
           align-items: center;
 }
 
-.loader .counter .counts-1, .loader .counter .counts-2 {
+.loader .counter .counts-1,
+.loader .counter .counts-2 {
   width: 50%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.loader .counter .counts-1 .count, .loader .counter .counts-2 .count {
+.loader .counter .counts-1 .count,
+.loader .counter .counts-2 .count {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -92,9 +178,63 @@ main {
           align-items: center;
 }
 
-.loader .counter .counts-1 .count h1, .loader .counter .counts-2 .count h1 {
+.loader .counter .counts-1 .count h1,
+.loader .counter .counts-2 .count h1 {
   font-size: 11rem;
-  font-family: 'Sans-Var';
+  font-family: "Sans-Var";
   font-weight: 300;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem;
+}
+
+.content h1 {
+  font-family: "Sans-Var";
+  font-weight: 100;
+  font-size: 7rem;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+@media (max-width: 820px) {
+  .content h1 {
+    font-size: 5rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 450px) {
+  nav .list.gsap {
+    display: none;
+  }
+  nav .list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: .4rem;
+    font-size: .9rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
