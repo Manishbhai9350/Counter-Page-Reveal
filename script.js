@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   setTimeout(LoaderManagement, Math.random() * 1500 + 500);
 
+  // document.querySelector('.content h1').innerHTML = 'HALLO WORLD'
   ToSpans(".content h1")
   ToSpans("nav a")
   ToSpans("nav p")

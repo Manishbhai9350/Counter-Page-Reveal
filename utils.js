@@ -7,7 +7,7 @@ export function ToSpans(elems){
         Elm.innerHTML = ''
         const Spans = Text.split('').map(t => {
             const span = document.createElement('span')
-            span.textContent = t;
+            span.innerHTML = t == ' ' ? '&nbsp;' : t;
             return span
         })
         Elm.append(...Array.from(Spans))
