@@ -2,6 +2,7 @@
 
 Smooth Counter Reveal For Your Website Portfolio Agency: A dynamic and engaging way to showcase your skills, projects, and achievements, enhancing user experience with smooth animations and eye-catching visuals that captivate potential clients and employers.
 
+ <a style='color:skyblue' href='https://manishbhai9350.github.io/Counter-Page-Reveal/' >View Live</a> 
 
 
 # Preview
